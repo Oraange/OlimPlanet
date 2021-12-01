@@ -8,7 +8,6 @@ using namespace std;
 vector<bool> isPrime = {true,};
 
 void CheckPrime(unsigned int N) {
-    // cout<< N << " " << isPrime[0] << endl;
     for (int i=2;i*i<=N;i++) {
         if (isPrime[i]) {
             for (int j=i*i; j<=N; j+=i) {
@@ -25,8 +24,6 @@ unsigned int SumOfAllPrimeNumbersLessThan() {
     for (int i=2; i<isPrime.size(); i++) {
         if (isPrime[i]) primeSum += i;
     }
-
-    cout << primeSum << endl;
 
     return primeSum;
 }
